@@ -5,11 +5,11 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	int N, M, kol;
 	float maxim, minim;
-	cout << "ââåäèòå ÷èñëà N>1 è M<32000" << endl;
+	cout << "Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð° N>1 Ð¸ M<32000" << endl;
 	cin >> N >> M;
 	while (N <= 1 || M >= 32000)
 	{
-		cout << "ïîâòîðèòå ïîïûòêó. ââåäèòå ÷èñëà N>1 è M<32000" << endl;
+		cout << "Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð¿Ð¾Ð¿Ñ‹Ñ‚ÐºÑƒ. Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð° N>1 Ð¸ M<32000" << endl;
 		cin >> N >> M;
 	}
 	if (N > M)
