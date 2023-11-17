@@ -3,20 +3,20 @@ using namespace std;
 int main()
 {
     setlocale(LC_ALL, "Russian");
-    //задали массивы A и B
+    //Р·Р°РґР°Р»Рё РјР°СЃСЃРёРІС‹ A Рё B
     const int size_a = 10;
     const int size_b = 5;
     int a[size_a] = { 1,2,3,4,5,6,7,8,9,10 };
     int b[size_b] = { 3,6,9,12,15 };
-    cout << "Массив A: ";
+    cout << "РњР°СЃСЃРёРІ A: ";
     for (int i = 0; i < size_a; i++)
         cout << a[i] << " ";
     cout << endl;
-    cout << "Массив B: ";
+    cout << "РњР°СЃСЃРёРІ B: ";
     for (int i = 0; i < size_b; i++)
         cout << b[i] << " ";
 
-    //пересечение
+    //РїРµСЂРµСЃРµС‡РµРЅРёРµ
     const int size_c = size_b;
     int* c = new int[size_c];
     int k = 0;
@@ -32,11 +32,11 @@ int main()
     delete[] c;
     c = new_c;
     cout << endl;
-    cout << "Пересечение: ";
+    cout << "РџРµСЂРµСЃРµС‡РµРЅРёРµ: ";
     for (int i = 0; i < k; i++)
         cout << c[i] << " ";
 
-    //объединение
+    //РѕР±СЉРµРґРёРЅРµРЅРёРµ
     const int size_g = size_a + size_b;
     int g[size_g];
     int p = 0;
@@ -59,11 +59,11 @@ int main()
                 g[j] = temp;
             }
     cout << endl;
-    cout << "Объединение: ";
+    cout << "РћР±СЉРµРґРёРЅРµРЅРёРµ: ";
     for (int i = 0; i < size_g; i++)
         cout << g[i] << " ";
 
-    //вычитание A - B
+    //РІС‹С‡РёС‚Р°РЅРёРµ A - B
     cout << endl;
     cout << "A - B: ";
     int size_new_a = size_a - k;
