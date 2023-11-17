@@ -3,22 +3,23 @@
 using namespace std;
 int main()
 {
-	int R,i,j, kol=0,ii=0;
-	//ââîäèì ðàäèóñ
+	int R, i, j, kol = 0, ii = 0;
+	long long ss = 0.01;
+	//Ð²Ð²Ð¾Ð´Ð¸Ð¼ Ñ€Ð°Ð´Ð¸ÑƒÑ
 	cin >> R;
-	for (i = 0; i < 2; i++)
+	for (i = 0; i < R; i++)
 	{
 		j = 0;
 		ii = 0;
 		while (ii == 0)
 		{
-			if ((sqrt((i * i + j * j)) > R)
+			ss = sqrt((i * i + j * j));
+			if (ss > R)
 				ii++;
-			j++;
+				j++;
 		}
-		cout << j << endl;
-		kol = kol + j;
+			kol = kol + j - 2;
 	}
-	cout << kol;
-	return 0;
+	cout << kol * 4;
+		return 0;
 }
