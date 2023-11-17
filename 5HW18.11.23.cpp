@@ -1,11 +1,26 @@
-#include <stdio.h>
+#include <iostream>
 using namespace std;
+void findSum(int arr[], int n)
+{
+    int power = 1 << n;
+    int minim=0;
+    for (int i = 0; i < power; i++)
+    {
+        int sum = 0;
+        for (int j = 0; j < n; j++)
+        {
+            if (i & (1 << j))
+                sum += arr[j];
+        }
+        if (sum == minim)
+            minim++;
+    }
+            cout << minim;
+}
 int main()
 {
-	int i, k, a[7] = { 1,1,3,6, 12, 17, 20 };
-	for (i = k = 0; i < 7; i++) {
-		if (k + 1 < a[i]) break;
-		k += a[i];
-	}
-	printf("k=%d\n", k + 1);
+    int arr[] = { 1,2,3,8 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+    findSum(arr, n);
+    return 0;
 }
